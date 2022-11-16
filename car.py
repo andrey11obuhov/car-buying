@@ -44,7 +44,10 @@ def generate_car():
     acceleration=round(random.uniform(1.9,10.), 1)
     box=random.choice('auto', 'robot', 'mannual')
     top_speed=random.randint(150, 500)
-    return car(hp, wd, price, seats, running, dtp, type, v_engine, engine_type, years, fuel_economy, acceleration, top_speed, v_trunk, box)
+    return car( hp, wd, price, seats,
+    running, dtp, type, v_engine, 
+    engine_type, years, fuel_economy, acceleration, top_speed, 
+     v_trunk, box)
 lists_of_cars={}
 for i in range(1000):
     lists_of_cars.update(str(i), generate_car())
