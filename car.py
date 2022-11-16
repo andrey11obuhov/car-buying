@@ -1,5 +1,6 @@
+import random
 class car(object):
-    def __init__(self, hp, wd, price, seats,
+    def __init__(self, name, hp, wd, price, seats,
     running, dtp, type, v_engine, 
     engine_type, years, fuel_economy, acceleration, top_speed, 
      v_trunk, box):
@@ -17,7 +18,16 @@ class car(object):
         self.fuel_economy=fuel_economy
         self.acceleration=acceleration
         self.box=box
-
+        self.name=name
+def generate_car():
+    hp=random.randint(50, 2000)
+    wd=random.choice('AWD', 'FWD', 'RWD')
+    price=randomint(50, 100000)*1000
+    seats=random.choice(2, 2, 2, 2, 3, 4, 5, 5, 5, 5, 5, 6, 7, 7, 8, 9)
+    running=random.randint(1, 500)*1000*random.choice(0, 1)
+    dtp=random.randint(0, 10)*random.choice(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0)
+    type=random.choice("
+    
 
 
 
