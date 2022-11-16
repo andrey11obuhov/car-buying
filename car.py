@@ -33,7 +33,7 @@ def generate_car():
     wd=random.choice('AWD', 'FWD', 'RWD')
     price=randomint(50, 100000)*1000
     running=random.randint(1, 500)*1000*random.choice(0, 1)
-    dtp=random.randint(0, 10)*random.choice(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0)
+    dtp=random.randint(0, 10)*random.choice(0, 0, 0, 0, 0, 0, 1, 1, 0)
     type=random.choice("SUV", 'Sedan', 'Hatcback', 'Crossover', 'Coupe', 'Minivan', 'Sports car', 'Racecar', 'Pickup truck', 'hypercar', 'muscle car', 'gt')
     seats = how_many_seats(type)
     v_engine=round(random.uniform(1.6, 10.), 1)
