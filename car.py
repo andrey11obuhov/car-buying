@@ -19,6 +19,14 @@ class car(object):
         self.acceleration=acceleration
         self.box=box
         self.name=name
+def how_many_seats(type):
+    if type=='SUV' or type=='Sedan' or type=='Hatcback' or type=='Crossover' or 'Pickup truck':
+        return 5
+    elif type=='Coupe', type=='Sports car', type=='Racecar', type=='hypercar', type=='Muscle car', type=='gt':\
+        return 2
+    elif type=='Minivan':
+        return 7
+    
 def generate_car():
     hp=random.randint(50, 2000)
     wd=random.choice('AWD', 'FWD', 'RWD')
@@ -26,7 +34,11 @@ def generate_car():
     running=random.randint(1, 500)*1000*random.choice(0, 1)
     dtp=random.randint(0, 10)*random.choice(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0)
     type=random.choice("SUV", 'Sedan', 'Hatcback', 'Crossover', 'Coupe', 'Minivan', 'Sports car', 'Racecar', 'Pickup truck', 'hypercar', 'muscle car', 'gt')
-    
+    seats = how_many_seats(type)
+    v_engine=random.randfloat(1.6, 10.)
+    v_trunk=random.randint(100, 1000)\
+    engine_type=random.choice('disel', 'gasoline', 'electro', 'hybrid')
+    years=random.randint(0, 40)
     
 
 
