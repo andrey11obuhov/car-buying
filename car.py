@@ -1,6 +1,6 @@
 import random
 class car(object):
-    def __init__(self, name, hp, wd, price, seats,
+    def __init__(self,  hp, wd, price, seats,
     running, dtp, type, v_engine, 
     engine_type, years, fuel_economy, acceleration, top_speed, 
      v_trunk, box):
@@ -18,7 +18,7 @@ class car(object):
         self.fuel_economy=fuel_economy
         self.acceleration=acceleration
         self.box=box
-        self.name=name
+        self.top_speed=top_speed
 def how_many_seats(type):
     if type=='SUV' or type=='Sedan' or type=='Hatcback' or type=='Crossover' or 'Pickup truck':
         return 5
@@ -42,7 +42,14 @@ def generate_car():
     fuel_economy=random.randfloat(5., 20.)
     acceleration=random.randfloat(1.9,10.)
     box=random.choice('auto', 'robot', 'mannual')
+    top_speed=random.randint(150, 500)
+    return Car(hp, wd, price, seats, running, dtp, type, v_engine, engine_type, years, fuel_economy, acceleration, top_speed, v_trunk, box)
+lists_of_cars={}
+for i in range(1000):
+    lists_of_cars.update(str(i), generate_car())
+ cars_json=json.dumps(lists_of_cars)
 
-
+with open("cars.json", "w") as ile:
+    ile.write(cars_json)
 
 
