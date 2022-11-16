@@ -39,7 +39,9 @@ def generate_car():
     v_trunk=random.randint(100, 1000)\
     engine_type=random.choice('disel', 'gasoline', 'electro', 'hybrid')
     years=random.randint(0, 40)
-    
+    fuel_economy=random.randfloat(5., 20.)
+    acceleration=random.randfloat(1.9,10.)
+    box=random.choice('auto', 'robot', 'mannual')
 
 
 
