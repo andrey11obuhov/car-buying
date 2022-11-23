@@ -151,3 +151,5 @@ def top_speed_ball(purpose, top_speed):
    else:
     return 51-(top_speed/10)
   
+def running_ball(running):
+  return running/1000
