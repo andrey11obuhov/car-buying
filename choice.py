@@ -24,8 +24,9 @@ def type_ball(purpose, type):
   if purpose=='family':
     if type=='Minivan':
       return 1
-    elif type=='SUV'
-    ortype=='Crossover' or type=='Sedan' or type=='Hatchback':
+    elif type=='SUV' or type=='Crossover' or type=='Sedan' or type=='Hatchback':
       return 2
-    elif type
-'SUV', 'Sedan', 'Hatcback', 'Crossover', 'Coupe', 'Minivan', 'Sports car', 'Racecar', 'Pickup truck', 'hypercar', 'muscle car', 'gt'
+    elif type=='Pickup truck' or type=='gt':
+      return 3
+    elif type=='Coupe' or type=='Sports car' or type=='Racecar' or type=='hypercar' or type=='muscle car'
+
