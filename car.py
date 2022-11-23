@@ -50,7 +50,7 @@ def generate_car():
      v_trunk, box)
 lists_of_cars={}
 for i in range(1000):
-    lists_of_cars.update(str(i), generate_car())
+    lists_of_cars.update('car #'+str(i), generate_car())
  cars_json=json.dumps(lists_of_cars)
 
 with open("cars.json", "w") as ile:
