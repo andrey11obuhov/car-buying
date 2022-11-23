@@ -4,7 +4,7 @@ def hp_ball(purpose, hp):
   else:
     return 21- round(hp/100)
  
-def price_ball(purpose, price):
+def price_ball(price):
   return round(price/50000)+1
 
 def wd_ball(purpose, wd):
@@ -152,4 +152,4 @@ def top_speed_ball(purpose, top_speed):
     return 51-(top_speed/10)
   
 def running_ball(running):
-  return running/1000
+  return running/1000 + 1
