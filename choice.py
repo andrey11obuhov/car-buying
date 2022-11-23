@@ -28,5 +28,28 @@ def type_ball(purpose, type):
       return 2
     elif type=='Pickup truck' or type=='gt':
       return 3
-    elif type=='Coupe' or type=='Sports car' or type=='Racecar' or type=='hypercar' or type=='muscle car'
-
+    elif type=='Coupe' or type=='Sports car' or type=='Racecar' or type=='hypercar' or type=='muscle car':
+      return 12
+  elif purpose=='speed':
+    if type=='Racecar' or type=='hypercar' or type=='muscle car':
+      return 1
+    elif type=='gt':
+      return 3
+    elif type=='Coupe' or type=='Sports car':
+      return 2
+    elif type=='Sedan' or type=='Hatchback':
+      return 4
+    elif type=='Pickup truck' or type=='SUV' or type=='Crossover':
+      return 6
+    elif type=='Minivan':
+      return 12
+   elif purpose=='off-road':
+    if type=='SUV' or type=='Crossover' or type=='Pickup truck':
+      return 1
+    elif type=='Minivan':
+      return 4
+    elif type=='Hatchback':
+      return 2
+    else:
+      return 12
+  
