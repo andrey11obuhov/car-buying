@@ -20,4 +20,12 @@ def wd_ball(purpose, wd):
       return 2
     elif wd=='AWD'
       return 1
- def 
+def type_ball(purpose, type):
+  if purpose=='family':
+    if type=='Minivan':
+      return 1
+    elif type=='SUV'
+    ortype=='Crossover' or type=='Sedan' or type=='Hatchback':
+      return 2
+    elif type
+'SUV', 'Sedan', 'Hatcback', 'Crossover', 'Coupe', 'Minivan', 'Sports car', 'Racecar', 'Pickup truck', 'hypercar', 'muscle car', 'gt'
