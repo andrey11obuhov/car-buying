@@ -52,4 +52,26 @@ def type_ball(purpose, type):
       return 2
     else:
       return 12
-  
+def dtp_ball(purpose, dtp):
+    if dtp==0:
+      return 0
+    else:
+      return dtp*10
+ def seats_ball(purpose, seats):
+    if purpose=='family':
+      if seats==7:
+        return 1
+      if seats==5:
+        return 2
+      if seats==2:
+        return 5
+    elif purpose=='speed' or purpose=='off-road':
+      if seats==7:
+        return 10
+      if seats==5:
+        return 5
+      if seats==2:
+        return 1
+ def 
+      
+      
