@@ -102,6 +102,15 @@ def v_trunk_ball(purpose, v_trunk):
   else:
     return v_trunk/100
   
+def engine_type_ball(purpose, engine_type):
+  if purpose=='family':
+    if engine_type=='electro':
+      return 1
+    elif engine_type=='disel' or engine_type=='hybrid':
+      return 2
+    elif engine_type=='gasoline':
+      return 4
+ 
 
   
      
