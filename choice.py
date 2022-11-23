@@ -112,6 +112,12 @@ def engine_type_ball(purpose, engine_type):
       return 4
  
 
-  
+def years_ball(purpose, years):
+  return years
+
+def fuel_economy_ball(purpose, fuel_economy):
+  return int(round(fuel_economy))
+
+def acceleration_ball(purpose
      
       
