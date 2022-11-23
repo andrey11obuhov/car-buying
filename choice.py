@@ -54,7 +54,7 @@ def type_ball(purpose, type):
     else:
       return 12
 
-def dtp_ball(purpose, dtp):
+def dtp_ball(dtp):
     if dtp==0:
       return 0
     else:
@@ -112,12 +112,40 @@ def engine_type_ball(purpose, engine_type):
       return 4
  
 
-def years_ball(purpose, years):
+def years_ball(years):
   return years
 
-def fuel_economy_ball(purpose, fuel_economy):
+def fuel_economy_ball(fuel_economy):
   return int(round(fuel_economy))
 
-def acceleration_ball(purpose
-     
-      
+def acceleration_ball(purpose, acceleration):
+  if purpose=='family':
+    if acceleration=>7. and acceleration<=10:
+      return 1
+    elif acceleration<=3.:
+      return 10
+    else:
+      return 5
+   else:
+    return round(acceleration)
+ 
+def box_ball(purpose, box):
+  if purpose=='family':
+    if box=='auto':
+      return 1
+    else:
+      return 10
+  else:
+     if box=='auto':
+      return 10
+    else:
+      return 1
+ def top_speed_ball(purpose, top_speed):
+  if purpose=='family':
+    if top_speed<250:
+      return 1
+    else: 
+      return top_speed/10
+   else:
+    return 51-(top_speed/10)
+  
