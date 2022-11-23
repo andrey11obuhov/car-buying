@@ -20,6 +20,7 @@ def wd_ball(purpose, wd):
       return 2
     elif wd=='AWD'
       return 1
+
 def type_ball(purpose, type):
   if purpose=='family':
     if type=='Minivan':
@@ -52,12 +53,14 @@ def type_ball(purpose, type):
       return 2
     else:
       return 12
+
 def dtp_ball(purpose, dtp):
     if dtp==0:
       return 0
     else:
       return dtp*10
- def seats_ball(purpose, seats):
+
+def seats_ball(purpose, seats):
     if purpose=='family':
       if seats==7:
         return 1
@@ -72,6 +75,34 @@ def dtp_ball(purpose, dtp):
         return 5
       if seats==2:
         return 1
- def 
+ 
+def v_engine_ball(purpose, v_engine):
+  if purpose=='family':
+    if v_engine=>1.6 and v_engine<=2.:
+      return 1
+    elif v_engine>2. and v_engine<=3.5:
+      return 3
+    elif v_engine>3.5 and v_engine<=5.:
+      return 7
+    elif v_engine>5.:
+      return int(v_engine*10)
+   elif purpose=='speed' or purpose=='off-road':
+     if v_engine=>1.6 and v_engine<=2.:
+        return 12
+      elif v_engine>2. and v_engine<=3.5:
+        return 3
+      elif v_engine>3.5 and v_engine<=5.:
+        return 2
+      elif v_engine>5.:
+        return 1
       
+def v_trunk_ball(purpose, v_trunk):
+  if purpose=='family':
+    return 11-(v_trunk/100)
+  else:
+    return v_trunk/100
+  
+
+  
+     
       
