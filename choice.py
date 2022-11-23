@@ -116,7 +116,7 @@ def years_ball(years):
   return years+1
 
 def fuel_economy_ball(fuel_economy):
-  return int(round(fuel_economy))
+  return int(round(fuel_economy))-4
 
 def acceleration_ball(purpose, acceleration):
   if purpose=='family':
