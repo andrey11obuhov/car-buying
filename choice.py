@@ -11,9 +11,9 @@ def wd_ball(purpose, wd):
   if purpose=='family':
     if wd=='RWD':
       return 2
-    elif wd in['FWD','AWD']:
+    elif wd in ['FWD','AWD']:
       return 1
-   elif purpose in['speed','off-road']:
+   elif purpose in ['speed','off-road']:
     if wd=='FWD':
       return 3
     elif wd=='RWD':
