@@ -11,9 +11,9 @@ def wd_ball(purpose, wd):
   if purpose=='family':
     if wd=='RWD':
       return 2
-    elif wd=='FWD' or wd=='AWD':
+    elif wd in['FWD','AWD']:
       return 1
-   elif purpose=='speed' or purpose=='off-road':
+   elif purpose in['speed','off-road']:
     if wd=='FWD':
       return 3
     elif wd=='RWD':
@@ -25,27 +25,27 @@ def type_ball(purpose, type):
   if purpose=='family':
     if type=='Minivan':
       return 1
-    elif type=='SUV' or type=='Crossover' or type=='Sedan' or type=='Hatchback':
+    elif type in ['SUV', 'Crossover', 'Sedan', 'Hatchback']:
       return 2
-    elif type=='Pickup truck' or type=='gt':
+    elif type in ['Pickup truck', 'gt']:
       return 3
-    elif type=='Coupe' or type=='Sports car' or type=='Racecar' or type=='hypercar' or type=='muscle car':
+    elif type in ['Coupe', 'Sports car', 'Racecar', 'hypercar', 'muscle car']:
       return 12
   elif purpose=='speed':
-    if type=='Racecar' or type=='hypercar' or type=='muscle car':
+    if type in ['Racecar', 'hypercar', 'muscle car']:
       return 1
     elif type=='gt':
       return 3
-    elif type=='Coupe' or type=='Sports car':
+    elif type in ['Coupe', 'Sports car']:
       return 2
-    elif type=='Sedan' or type=='Hatchback':
+    elif type in ['Sedan', 'Hatchback']:
       return 4
-    elif type=='Pickup truck' or type=='SUV' or type=='Crossover':
+    elif type in ['Pickup truck', 'SUV', 'Crossover']:
       return 6
     elif type=='Minivan':
       return 12
    elif purpose=='off-road':
-    if type=='SUV' or type=='Crossover' or type=='Pickup truck':
+    if type in ['SUV', 'Crossover',]'Pickup truck']:
       return 1
     elif type=='Minivan':
       return 4
