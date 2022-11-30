@@ -144,7 +144,7 @@ def box_ball(purpose, box):
   else:
      if box=='auto':
       return 10
-    else:
+     else:
       return 1
     
     
