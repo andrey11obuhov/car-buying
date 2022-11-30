@@ -106,7 +106,7 @@ def engine_type_ball(purpose, engine_type):
   if purpose=='family':
     if engine_type=='electro':
       return 1
-    elif engine_type=='disel' or engine_type=='hybrid':
+    elif engine_type in ['disel', 'hybrid']:
       return 2
     elif engine_type=='gasoline':
       return 4
@@ -115,7 +115,7 @@ def engine_type_ball(purpose, engine_type):
       return 4
     elif engine_type=='hybrid':
       return 3
-    elif engine_type=='gasoline' or engine_type=='hybrid':
+    elif engine_type in ['gasoline', 'hybrid']:
       return 1
 
 def years_ball(years):
