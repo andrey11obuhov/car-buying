@@ -2,7 +2,7 @@ def hp_ball(purpose, hp):
   if purpose== 'family':
     return round(hp/100)
   else:
-    return 21- round(hp/100)
+    return 21 - round(hp/100)
  
 def price_ball(price):
   return round(price/50000)+1
