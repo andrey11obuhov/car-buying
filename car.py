@@ -37,7 +37,7 @@ def generate_car():
     type=random.choice('SUV', 'Sedan', 'Hatcback', 'Crossover', 'Coupe', 'Minivan', 'Sports car', 'Racecar', 'Pickup truck', 'hypercar', 'muscle car', 'gt')
     seats = how_many_seats(type)
     v_engine=round(random.uniform(1.6, 10.), 1)
-    v_trunk=random.randint(100, 1000)\
+    v_trunk=random.randint(100, 1000)
     engine_type=random.choice('disel', 'gasoline', 'electro', 'hybrid')
     years=random.randint(0, 40)
     fuel_economy=round(random.uniform(5., 20.), 1)
