@@ -21,9 +21,9 @@ class car(object):
         self.box=box
         self.top_speed=top_speed
 def how_many_seats(type):
-    if type=='SUV' or type=='Sedan' or type=='Hatcback' or type=='Crossover' or 'Pickup truck':
+    if type in ['SUV', 'Sedan', 'Hatcback', 'Crossover', 'Pickup truck']:
         return 5
-    elif type=='Coupe', type=='Sports car', type=='Racecar', type=='hypercar', type=='Muscle car', type=='gt':\
+    elif type in ['Coupe', 'Sports car', 'Racecar', 'hypercar', 'Muscle car', 'gt']:
         return 2
     elif type=='Minivan':
         return 7
