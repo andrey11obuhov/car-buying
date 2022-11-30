@@ -45,7 +45,7 @@ def type_ball(purpose, type):
     elif type=='Minivan':
       return 12
    elif purpose=='off-road':
-    if type in ['SUV', 'Crossover',]'Pickup truck']:
+    if type in ['SUV', 'Crossover','Pickup truck']:
       return 1
     elif type=='Minivan':
       return 4
