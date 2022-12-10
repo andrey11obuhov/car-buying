@@ -1,3 +1,4 @@
+import pandas as pd
 def hp_ball(purpose, hp):
   if purpose== 'family':
     return round(hp/100)
@@ -159,3 +160,8 @@ def top_speed_ball(purpose, top_speed):
   
 def running_ball(running):
   return running/1000 + 1
+
+
+
+with open("cars.json", "r") as file:
+  cars=pd.Dataframe(file)
