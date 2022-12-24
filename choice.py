@@ -230,11 +230,11 @@ def calculations():
   if res.shape[0]==1:
     auto=res.index[0]
   else:
-    res=cars.query('sum2==sum2.min()')
+    res=res.query('sum2==sum2.min()')
     if res.shape[0]==1:
       auto=res.index[0]
     else:
-      res=cars.query('sum3==sum3.min()')
+      res=res.query('sum3==sum3.min()')
       auto=res.index[0]
   return auto
 calc=calculations()
