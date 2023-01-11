@@ -1,0 +1,29 @@
+<MainWidget>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+    name_input: name
+    hello_label: hello
+   
+
+    Label:
+        font_size: 30
+        text: 'Write purpose of your car'
+        id: hello
+    
+    TextInput:
+        multiline: False
+        size_hint: (.5, None)
+        pos_hint:{"center_x":0.5, "top":1}
+        height: 50
+        font_size: 30
+        id: name
+    Button:
+        font_size: 30
+        text: 'Find car'
+        size_hint: (.5, None)
+        pos_hint:{"center_x":0.5, "top":1}
+        on_press: root.get_car()
+   
+
+  

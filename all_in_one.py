@@ -1,5 +1,10 @@
 import pandas as pd
 import json
+import kivy   
+from kivy.app import App    
+from kivy.uix.boxlayout import BoxLayout
+from kivy.properties import ObjectProperty
+
 with open("cars.json", "r") as file:
   data = json.load(file)
   
@@ -202,6 +207,7 @@ def select(purpose):
     
   def running_ball(running):
     return running/1000 + 1
+  
   cars["hp_ball"]=cars.hp.apply(hp_ball)
   cars["price_ball"]=cars.price.apply(price_ball)
   cars["years_ball"]=cars.years.apply(years_ball)
@@ -226,16 +232,49 @@ def select(purpose):
   cars["sum3"]=cars.price_ball+cars.years_ball+cars.running_ball+cars.dtp_ball+cars.fuel_economy_ball
   def calculations():
     auto=''
-    res=cars.query('sum1==sum1.min()')
+    res=cars.query('sum2==sum2.min()')
     if res.shape[0]==1:
       auto=res.index[0]
     else:
-      res=cars.query('sum2==sum2.min()')
+      res=res.query('sum3==sum3.min()')
       if res.shape[0]==1:
         auto=res.index[0]
       else:
-        res=cars.query('sum3==sum3.min()')
+        res=res.query('sum1==sum1.min()')
         auto=res.index[0]
     return auto
   calc=calculations()
   return calc
+purposes=['family', 'speed', 'off-road']
+class MainWidget(BoxLayout):
+    def get_car(self):
+        if self.name_input.text in purposes:
+            carsres=select(self.name_input.text)
+            car_info=data.get(carsres)
+            names=['Horse power: ', 'Drivetrain: ', 'Price: ',
+             'Number of seats: ','Mileage: ',
+             'Accidents or damage: ', 'Class: ',
+             'Engine capacity: ', 'Engine: ', 'Age: ',
+             'Fuel economy: ','Acceleration 0-100:  ',
+             'Top speed: ', 'Trank capacity: ', 'Transmision: ']
+            out=dict(zip(names, car_info))
+            s=''
+            for i in out:
+                s=s.__add__(str(i)+str(out.get(i))+'\n')
+            self.hello_label.text =carsres+'\n'+s
+        else:
+            self.hello_label.text='There is no such purpose'
+    hello_label = ObjectProperty()
+    name_input = ObjectProperty()
+    pass
+
+
+class MainApp(App):
+
+    def build(self):
+        return MainWidget()
+
+
+if __name__ == '__main__':
+    app = MainApp()
+    app.run()
